@@ -1,0 +1,21 @@
+@use 'imports/colors';
+
+.routerButton {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: black;
+
+    background-color: colors.$routerButton;
+
+    margin-bottom: 10px;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: colors.$routerButtonHovered;
+    }
+}
