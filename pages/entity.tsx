@@ -1,9 +1,24 @@
+import { useRouter } from "next/router";
+
+import styles from '../styles/Entity.module.scss'
 
 export default function Entity() {
-    
-    return (
-      <div>
-          1234
-      </div>
-    )
-  }
+  const { query } = useRouter();
+  console.log(query)
+
+  return (
+    <>
+      <header className="">
+
+      </header>
+
+      <main>
+
+      </main>
+
+      <footer>
+
+      </footer>
+    </>
+  )
+}

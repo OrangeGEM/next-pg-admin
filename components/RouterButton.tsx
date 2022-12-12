@@ -1,12 +1,13 @@
 import Link from 'next/link';
 
-import { UrlObject } from 'url';
+import { EntitiesEnum } from '../types/entitiesName.enum';
 
 import styles from '../styles/RouterButton.module.scss';
 
 interface RouterButtonInterface {
     url: string,
     text: string,
+    entity: EntitiesEnum,
 }
 
 export default function RouterButton(props: RouterButtonInterface) {
@@ -14,7 +15,7 @@ export default function RouterButton(props: RouterButtonInterface) {
         <Link 
             href={{
                 pathname: props.url,
-                query: {entityName: props.text}
+                query: {entityName: props.entity, text: props.text}
             }}
         >
             <div className={styles.routerButton}>
